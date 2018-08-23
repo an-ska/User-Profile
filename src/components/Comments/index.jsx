@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import styles from "./Comments.scss";
 import Comment from "../Comment";
+import AddCommentForm from "../../components/AddCommentForm";
 import data from "../../userProfileData";
 
 class Comments extends Component {
@@ -10,25 +11,49 @@ class Comments extends Component {
     this.state = {
       comments: [
         ...data.comments
-      ]
+      ],
+      firstAvailableId: 5,
     }
   }
 
-  render() {
+  addComment = input => {
+    const commentText = input;
 
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          id: this.state.firstAvailableId,
+          photoUrl: "",
+          name: "Jan Kowalski",
+          text: commentText,
+          date: "date will be here"
+        }
+      ],
+      firstAvailableId: this.state.firstAvailableId + 1,
+    })
+  }
+
+  render() {
     return (
-      <ul>
-        {this.state.comments.map(comment =>
-          <Comment
-            key={comment.id}
-            id={comment.id}
-            photo={comment.photoUrl}
-            name={comment.name}
-            text={comment.text}
-            date={comment.date}
-          />
-        )}
-      </ul>
+      <Fragment>
+        <ul>
+          {this.state.comments.map(comment =>
+            <Comment
+              key={comment.id}
+              id={comment.id}
+              photo={comment.photoUrl}
+              name={comment.name}
+              text={comment.text}
+              date={comment.date}
+            />
+          )}
+        </ul>
+        <AddCommentForm
+          addComment={this.addComment}
+        />
+      </Fragment>
+
     )
   }
 }

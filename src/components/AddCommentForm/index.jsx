@@ -28,8 +28,7 @@ class AddCommentForm extends Component {
 
     if (inputLength > 0) {
       e.preventDefault();
-      // this.props.addComment(this.state.input);
-
+      this.props.addComment(this.state.input);
       this.setState({
         input: ""
       })
