@@ -1,9 +1,14 @@
 import React from 'react';
 import styles from './UserProfile.scss';
 import data from "../../userProfileData";
+import AddCommentForm from "../../components/AddCommentForm";
 
 const UserProfile = () => (
-  <span>{data.user.id}</span>
+  <div>
+    {/* <span>{data.user.id}</span> */}
+    <AddCommentForm />
+  </div>
+
 );
 
 export default UserProfile;

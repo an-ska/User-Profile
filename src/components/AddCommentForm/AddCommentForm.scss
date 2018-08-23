@@ -1,0 +1,22 @@
+.formBox {
+  max-width: 466px;
+  border-radius: 0 0 5px 5px;
+  background: #FFF;
+  padding: 50px 25px 30px 25px;
+  box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #DBE0E8;
+  font-size: 18px;
+  color: #8298B9;
+  line-height: 22px;
+  background: #FFF;
+}
+
+::placeholder {
+  color: #8298B9;
+}
