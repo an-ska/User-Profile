@@ -14,22 +14,22 @@ const userProfileData = {
       "id": 2,
       "photoUrl": "",
       "name": "Mike Ross",
-      "comment": "Lorem ipsum",
-      "commentDate": "1d"
+      "text": "Lorem ipsum",
+      "date": "1d"
     },
     {
       "id": 3,
       "photoUrl": "",
       "name": "Rachel Zein",
-      "comment": "Lorem ipsum",
-      "commentDate": "1d"
+      "text": "Lorem ipsum",
+      "date": "1d"
     },
     {
       "id": 4,
       "photoUrl": "",
       "name": "Louis Litt",
-      "comment": "Lorem ipsum",
-      "commentDate": "1d"
+      "text": "Lorem ipsum",
+      "date": "1d"
     },
   ]
 };
