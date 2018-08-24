@@ -4,6 +4,8 @@ import Comment from "../Comment";
 import AddCommentForm from "../../components/AddCommentForm";
 import data from "../../userProfileData";
 
+let firstAvailableId = 5;
+
 class Comments extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,6 @@ class Comments extends Component {
       comments: [
         ...data.comments
       ],
-      firstAvailableId: 5,
     }
   }
 
@@ -23,15 +24,15 @@ class Comments extends Component {
       comments: [
         ...this.state.comments,
         {
-          id: this.state.firstAvailableId,
+          id: firstAvailableId,
           photoUrl: "",
           name: "Jan Kowalski",
           text: commentText,
           date: "date will be here"
         }
       ],
-      firstAvailableId: this.state.firstAvailableId + 1,
     })
+    firstAvailableId++;
   }
 
   render() {
@@ -53,7 +54,6 @@ class Comments extends Component {
           addComment={this.addComment}
         />
       </Fragment>
-
     )
   }
 }
