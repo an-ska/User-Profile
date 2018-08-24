@@ -28,7 +28,7 @@ class Comments extends Component {
           photoUrl: "",
           name: "Jan Kowalski",
           text: commentText,
-          date: "date will be here"
+          ageInDays: 0
         }
       ],
     })
@@ -46,7 +46,7 @@ class Comments extends Component {
               photo={comment.photoUrl}
               name={comment.name}
               text={comment.text}
-              date={comment.date}
+              age={comment.ageInDays}
             />
           )}
         </ul>

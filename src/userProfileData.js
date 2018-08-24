@@ -1,35 +1,35 @@
 const userProfileData = {
   "user": {
     "id": 1,
-    "photoUrl": "",
+    "photoUrl": "../../images/avatar.png",
     "name": "Harvey Specter",
     "location": "New York, USA",
     "likes": 121,
     "following": 723,
     "followers": 4433,
-    "url": ""
+    "url": "https://companyname.com/harveyspecter"
   },
   "comments": [
     {
       "id": 2,
-      "photoUrl": "",
+      "photoUrl": "../../images/avatar.png",
       "name": "Mike Ross",
       "text": "Lorem ipsum",
-      "date": "1d"
+      "ageInDays": "1"
     },
     {
       "id": 3,
-      "photoUrl": "",
+      "photoUrl": "../../images/avatar.png",
       "name": "Rachel Zein",
       "text": "Lorem ipsum",
-      "date": "1d"
+      "ageInDays": "3"
     },
     {
       "id": 4,
-      "photoUrl": "",
+      "photoUrl": "../../images/avatar.png",
       "name": "Louis Litt",
       "text": "Lorem ipsum",
-      "date": "1d"
+      "ageInDays": "24"
     },
   ]
 };
