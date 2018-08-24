@@ -11,7 +11,8 @@ class Comments extends Component {
     super(props);
 
     this.state = {
-      comments: []
+      comments: [],
+      areCommentsShown: true
     }
   }
 
@@ -30,6 +31,11 @@ class Comments extends Component {
     })
   }
 
+  handleClick = () => {
+    this.setState({
+      areCommentsShown: !this.state.areCommentsShown
+    })
+  }
 
   addComment = input => {
     const commentText = input;
@@ -50,20 +56,31 @@ class Comments extends Component {
   }
 
   render() {
+    const { comments, areCommentsShown } = this.state;
+
     return (
       <Fragment>
-        <ul>
-          {this.state.comments.map(comment =>
-            <Comment
-              key={comment.id}
-              id={comment.id}
-              photo={comment.photoUrl}
-              name={comment.name}
-              text={comment.text}
-              age={comment.ageInDays}
-            />
-          )}
-        </ul>
+        <a
+          title="Show or hide the comments"
+          onClick={this.handleClick}
+          >
+          {areCommentsShown ? "Hide" : "Show"} comments({comments.length})
+        </a>
+        {
+          areCommentsShown &&
+          <ul>
+            {this.state.comments.map(comment =>
+              <Comment
+                key={comment.id}
+                id={comment.id}
+                photo={comment.photoUrl}
+                name={comment.name}
+                text={comment.text}
+                age={comment.ageInDays}
+              />
+            )}
+          </ul>
+        }
         <AddCommentForm
           addComment={this.addComment}
         />
