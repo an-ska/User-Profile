@@ -1,15 +1,12 @@
-import React from 'react';
-import styles from './UserProfile.scss';
+import React from "react";
+import styles from "./UserProfile.scss";
+import MainUser from "../../components/MainUser";
 import Comments from "../../components/Comments";
-import Button from "../../components/Button";
 
 const UserProfile = () => (
   <div>
+    <MainUser />
     <Comments />
-    <Button
-      text="follow"
-      // handleClick={this.handleClick}
-    />
   </div>
 
 );

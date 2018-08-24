@@ -61,7 +61,7 @@ class Comments extends Component {
     return (
       <Fragment>
         <a
-          title="Show or hide the comments"
+          role="button"
           onClick={this.handleClick}
           >
           {areCommentsShown ? "Hide" : "Show"} comments({comments.length})
