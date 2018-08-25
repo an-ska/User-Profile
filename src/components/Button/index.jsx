@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Button.scss";
 
-const Button = ({ text }) => (
+const Button = ({ text, handleClick }) => (
   <button
     type="button"
-    onClick="handleClick will be here"
-    className={styles.button}>
+    className={styles.button}
+    onClick={handleClick}>
     {text}
   </button>
 )

@@ -47,6 +47,28 @@ class MainUser extends Component {
     }))
   }
 
+  changeFollowersNumber = () => {
+    if (!this.state.isFollowed) {
+      this.setState((prevState) => ({
+        mainUser: {
+          ...prevState.mainUser,
+          followers: prevState.mainUser.followers + 1
+        }
+      }))
+    } else {
+      this.setState((prevState) => ({
+        mainUser: {
+          ...prevState.mainUser,
+          followers: prevState.mainUser.followers > 0 ? prevState.mainUser.followers - 1 : prevState.mainUser.followers
+        }
+      }))
+    }
+
+    this.setState((prevState) => ({
+      isFollowed: !prevState.isFollowed
+    }))
+  }
+
   render(){
     const { mainUser, isLiked, isFollowed }  = this.state;
 
@@ -83,7 +105,8 @@ class MainUser extends Component {
           </ul>
         </div>
         <Button
-          text="follow"
+          text={`${isFollowed ? "following" : "follow"}`}
+          handleClick={this.changeFollowersNumber}
         />
       </div>
     )
