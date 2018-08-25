@@ -31,10 +31,10 @@ class Comments extends Component {
     })
   }
 
-  handleClick = () => {
-    this.setState({
-      areCommentsShown: !this.state.areCommentsShown
-    })
+  toggleComments = () => {
+    this.setState((prevState) => ({
+      areCommentsShown: !prevState.areCommentsShown
+    }))
   }
 
   addComment = input => {
@@ -62,7 +62,7 @@ class Comments extends Component {
       <Fragment>
         <a
           role="button"
-          onClick={this.handleClick}
+          onClick={this.toggleComments}
           >
           {areCommentsShown ? "Hide" : "Show"} comments({comments.length})
         </a>
