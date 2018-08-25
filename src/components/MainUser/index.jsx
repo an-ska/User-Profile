@@ -82,7 +82,7 @@ class MainUser extends Component {
 
     return (
       <Fragment>
-        <div>
+        <div className={styles.userCard}>
           <div id={mainUser.id}>
             <a href="#">
               <i
@@ -131,7 +131,7 @@ class MainUser extends Component {
               handleClick={this.toggleDialog}
              />
           }
-      </div>
+        </div>
       </Fragment>
     )
   }

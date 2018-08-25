@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import styles from "./Comments.scss";
 import Comment from "../Comment";
 import AddCommentForm from "../../components/AddCommentForm";
@@ -59,7 +59,7 @@ class Comments extends Component {
     const { comments, areCommentsShown } = this.state;
 
     return (
-      <Fragment>
+      <div className={styles.commentsContainer}>
         <a
           role="button"
           onClick={this.toggleComments}
@@ -68,7 +68,7 @@ class Comments extends Component {
         </a>
         {
           areCommentsShown &&
-          <ul>
+          <ul className={styles.comments}>
             {this.state.comments.map(comment =>
               <Comment
                 key={comment.id}
@@ -84,7 +84,7 @@ class Comments extends Component {
         <AddCommentForm
           addComment={this.addComment}
         />
-      </Fragment>
+      </div>
     )
   }
 }

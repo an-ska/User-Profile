@@ -1,0 +1,33 @@
+.avatar {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  // top: -48px;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.userCard {
+  // position: absolute;
+  // top: 36px;
+  // left: 0;
+  // right: 0;
+  position: relative;
+  margin-top: -59px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFF;
+  width: 285px;
+  height: 235px;
+  box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+}

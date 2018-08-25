@@ -1,9 +1,16 @@
 .formBox {
-  max-width: 466px;
   border-radius: 0 0 5px 5px;
   background: #FFF;
-  padding: 50px 25px 30px 25px;
+  padding: 15px 25px 30px 25px;
   box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
+  width: 285px;
+  margin: 0 auto;
+  position:absolute;
+  bottom: -69px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
