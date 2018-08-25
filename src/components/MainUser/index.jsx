@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./MainUser.scss";
+import Statistic from "../../components/Statistic";
 import Button from "../../components/Button";
 import data from "../../userProfileData";
 
@@ -37,10 +38,23 @@ class MainUser extends Component {
           <img
             alt="commentator photo"
             src={mainUser.photoUrl}
-            className={styles.avatar}/>
-          <span>likes {mainUser.likes} </span>
-          <span>following {mainUser.following} </span>
-          <span>followers {mainUser.followers}</span>
+            className={styles.avatar}
+          />
+          <ul className={styles.statistics}>
+            <Statistic
+              value={mainUser.likes}
+              label="likes"
+            />
+            <Statistic
+              value={mainUser.following}
+              label="following"
+            />
+            <Statistic
+              value={mainUser.followers}
+              label="followers"
+            />
+          </ul>
+
         </div>
         <Button
           text="follow"
