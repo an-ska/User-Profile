@@ -9,7 +9,9 @@ class MainUser extends Component {
     super(props);
 
     this.state = {
-      mainUser: {}
+      mainUser: {},
+      isLiked: false,
+      isFollowed: false
     }
   }
 
@@ -23,8 +25,30 @@ class MainUser extends Component {
     })
   }
 
+  changeLikesNumber = () => {
+    if (!this.state.isLiked) {
+      this.setState((prevState) => ({
+        mainUser: {
+          ...prevState.mainUser,
+          likes: prevState.mainUser.likes + 1
+        }
+      }))
+    } else {
+      this.setState((prevState) => ({
+        mainUser: {
+          ...prevState.mainUser,
+          likes: prevState.mainUser.likes > 0 ? prevState.mainUser.likes - 1 : prevState.mainUser.likes
+        }
+      }))
+    }
+
+    this.setState((prevState) => ({
+      isLiked: !prevState.isLiked
+    }))
+  }
+
   render(){
-    const { mainUser }  = this.state;
+    const { mainUser, isLiked, isFollowed }  = this.state;
 
     return (
       <div>
@@ -33,7 +57,10 @@ class MainUser extends Component {
             <i className="fas fa-share-square"></i>
           </a>
           <p>{mainUser.name}</p>
-          <i className="far fa-heart"></i>
+          <i
+            className={`${"fa-heart"} ${isLiked ? "fas" : "far"}`}
+            onClick={this.changeLikesNumber}>
+          </i>
           <p>{mainUser.location}</p>
           <img
             alt="commentator photo"
@@ -54,7 +81,6 @@ class MainUser extends Component {
               label="followers"
             />
           </ul>
-
         </div>
         <Button
           text="follow"
