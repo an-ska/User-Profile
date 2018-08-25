@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import styles from "./MainUser.scss";
 import Statistic from "../../components/Statistic";
 import Button from "../../components/Button";
+import Dialog from "../../components/Dialog";
 import data from "../../userProfileData";
 
 class MainUser extends Component {
@@ -11,7 +12,8 @@ class MainUser extends Component {
     this.state = {
       mainUser: {},
       isLiked: false,
-      isFollowed: false
+      isFollowed: false,
+      isDialogOpened: false
     }
   }
 
@@ -23,6 +25,12 @@ class MainUser extends Component {
     this.setState({
       mainUser: data.user
     })
+  }
+
+  toggleDialog = () => {
+    this.setState((prevState) => ({
+      isDialogOpened: !prevState.isDialogOpened
+    }))
   }
 
   changeLikesNumber = () => {
@@ -70,45 +78,61 @@ class MainUser extends Component {
   }
 
   render(){
-    const { mainUser, isLiked, isFollowed }  = this.state;
+    const { mainUser, isLiked, isFollowed, isDialogOpened }  = this.state;
 
     return (
-      <div>
-        <div id={mainUser.id}>
-          <a href="#">
-            <i className="fas fa-share-square"></i>
-          </a>
-          <p>{mainUser.name}</p>
-          <i
-            className={`${"fa-heart"} ${isLiked ? "fas" : "far"}`}
-            onClick={this.changeLikesNumber}>
-          </i>
-          <p>{mainUser.location}</p>
-          <img
-            alt="commentator photo"
-            src={mainUser.photoUrl}
-            className={styles.avatar}
+      <Fragment>
+        <div>
+          <div id={mainUser.id}>
+            <a href="#">
+              <i
+                className="fas fa-share-square"
+                onClick={this.toggleDialog}
+              ></i>
+            </a>
+            <p>{mainUser.name}</p>
+            <i
+              className={`${"fa-heart"} ${isLiked ? "fas" : "far"}`}
+              onClick={this.changeLikesNumber}>
+            </i>
+            <p>{mainUser.location}</p>
+            <img
+              alt="commentator photo"
+              src={mainUser.photoUrl}
+              className={styles.avatar}
+            />
+            <ul className={styles.statistics}>
+              <Statistic
+                value={mainUser.likes}
+                label="likes"
+              />
+              <Statistic
+                value={mainUser.following}
+                label="following"
+              />
+              <Statistic
+                value={mainUser.followers}
+                label="followers"
+              />
+            </ul>
+          </div>
+          <Button
+            text={`${isFollowed ? "following" : "follow"}`}
+            handleClick={this.changeFollowersNumber}
           />
-          <ul className={styles.statistics}>
-            <Statistic
-              value={mainUser.likes}
-              label="likes"
-            />
-            <Statistic
-              value={mainUser.following}
-              label="following"
-            />
-            <Statistic
-              value={mainUser.followers}
-              label="followers"
-            />
-          </ul>
         </div>
-        <Button
-          text={`${isFollowed ? "following" : "follow"}`}
-          handleClick={this.changeFollowersNumber}
-        />
+        <div>
+          {
+            isDialogOpened &&
+            <Dialog
+              icon="fa-times-circle"
+              text="Copy the following link to share this profile:"
+              link={mainUser.url}
+              handleClick={this.toggleDialog}
+             />
+          }
       </div>
+      </Fragment>
     )
   }
 }

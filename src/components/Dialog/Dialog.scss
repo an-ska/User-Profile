@@ -1,0 +1,46 @@
+.dialog {
+  background: white;
+  max-width: 500px;
+  min-width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 1px 1px 8px 0 #222;
+  animation: show .5s ease;
+}
+
+.close {
+  cursor: pointer;
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
