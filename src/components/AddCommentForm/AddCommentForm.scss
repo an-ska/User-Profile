@@ -4,7 +4,7 @@
   padding: 14.5px 25px 16px 25px;
   box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
   position: absolute;
-  bottom: -62.5px;
+  top: 526.5px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -15,13 +15,20 @@ textarea {
   border: none;
   border-radius: 0;
   border-bottom: 2px solid #DBE0E8;
-  font-size: 18px;
+  font-size: 14px;
   color: #8298B9;
   line-height: 22px;
   background: #FFF;
   height: 28px;
-  resize: none;
+  resize: vertical;
+  max-height: 50px;
+  padding: 5px;
 }
 ::placeholder {
   color: #8298B9;
+  font-size: 18px;
+}
+.error {
+  font-size: 14px;
+  color: #Ef1426;
 }
