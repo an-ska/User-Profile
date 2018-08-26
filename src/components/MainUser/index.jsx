@@ -133,7 +133,7 @@ class MainUser extends Component {
             isDialogOpened &&
             <Dialog
               icon="fa-times-circle"
-              text="Copy the following link to share this profile:"
+              text="Please copy the following link to share this profile:"
               link={mainUser.url}
               handleClick={this.toggleDialog}
             />
