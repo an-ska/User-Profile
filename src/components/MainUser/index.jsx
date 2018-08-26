@@ -102,7 +102,8 @@ class MainUser extends Component {
               <h1 className={styles.name}>{mainUser.name}</h1>
               <i
                 className={`${"fa-heart"} ${styles.like} ${isLiked ? "fas" : "far"}`}
-                onClick={this.changeLikesNumber}></i>
+                onClick={this.changeLikesNumber}>
+              </i>
             </span>
             <span className={styles.location}>{mainUser.location}</span>
             <div className={styles.content}>

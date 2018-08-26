@@ -63,9 +63,8 @@ class Comments extends Component {
         <a
           role="button"
           className={styles.toggleComments}
-          onClick={this.toggleComments}
-          >
-          {areCommentsShown ? "Hide" : "Show"} comments({comments.length})
+          onClick={this.toggleComments}>
+          {areCommentsShown ? "Hide" : "Show"} comments ({comments.length})
         </a>
         {
           areCommentsShown &&
@@ -82,9 +81,7 @@ class Comments extends Component {
             )}
           </ul>
         }
-        <AddCommentForm
-          addComment={this.addComment}
-        />
+        <AddCommentForm addComment={this.addComment}/>
       </div>
     )
   }
