@@ -38,8 +38,6 @@ class Comments extends Component {
   }
 
   addComment = input => {
-    const commentText = input;
-
     this.setState((prevState) => ({
       comments: [
         ...prevState.comments,
@@ -47,7 +45,7 @@ class Comments extends Component {
           id: firstAvailableId,
           photoUrl: "../../images/avatar.png",
           name: "Jan Kowalski",
-          text: commentText,
+          text: input,
           ageInDays: 0
         }
       ],

@@ -8,7 +8,6 @@ const UserProfile = () => (
     <UserCard />
     <Comments />
   </div>
-
 );
 
 export default UserProfile;

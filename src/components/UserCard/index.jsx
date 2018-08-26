@@ -78,7 +78,7 @@ class UserCard extends Component {
   }
 
   render(){
-    const { mainUser, isLiked, isFollowed, isDialogOpened }  = this.state;
+    const { mainUser, isLiked, isFollowed, isDialogOpened } = this.state;
 
     return (
       <Fragment>
