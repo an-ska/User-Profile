@@ -6,7 +6,7 @@
   background: #FFF;
   box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
   border-radius: 5px;
-  padding: 15px;
+  padding: 20px 20px 17px;
 }
 .avatar {
   width: 70px;
@@ -24,12 +24,11 @@
   right: 10px;
   top: 10px;
   color: #FFA640;
-  text-decoration: none;
 }
 .heading {
   display: flex;
   justify-content: center;
-  padding: 21px 0 0 32px;
+  padding: 14px 0 0 32px;
 }
 .name {
   font-size: 18px;
@@ -62,16 +61,8 @@
   justify-content: center;
   flex: 1;
 }
-.line {
-  width: 1px;
-  color: black;
-  height: 10px;
-}
 
 @media (min-width: 500px) {
-  .userCard {
-    padding: 20px;
-  }
   .avatar {
     top: 20px;
     left: 20px;
@@ -89,7 +80,7 @@
   .content {
     flex-direction: row;
     align-items: center;
-    padding: 31px 0 8px;
+    padding: 31px 0 11px;
     justify-content: space-between;
   }
   .statistics {

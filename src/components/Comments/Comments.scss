@@ -6,11 +6,10 @@
   box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 15px 0 0 15px;
   position: relative;
 }
 .comments {
-  height: 530px;
+  height: 453.5px;
   overflow-x: scroll;
   list-style: none;
   padding-right: 15px;
@@ -21,7 +20,13 @@
   text-decoration: underline;
   text-align: center;
   cursor: pointer;
-  padding: 25px 0;
+  padding: 25px 0 30px 20px;
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: 500px) {
+  .toggleComments {
+    text-align: left;
+  }
 }

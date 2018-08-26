@@ -1,5 +1,44 @@
+.comment {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 20.5px 0 20px 20px;
+  border-bottom: 1px solid #EBEBEB;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+.commentLeft{
+  display: flex;
+}
+
+.commentBody {
+  padding: 0 20px 0 11px;
+}
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+.name {
+  color: #002C71;
+}
+.text {
+  line-height: 21px;
+  color: #444;
+}
+.commentRight {
+  color: #8298B9;
+}
+
+@media (min-width: 500px) {
+  .comment {
+    padding: 30.5px 0 25.5px 20px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
 }

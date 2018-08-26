@@ -1,17 +1,16 @@
 .formBox {
   border-radius: 0 0 5px 5px;
   background: #FFF;
-  padding: 15px 25px 30px 25px;
-  box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
-  margin: 0 auto;
-  position:absolute;
-  bottom: -69px;
+  padding: 14.5px 25px 16px 25px;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
+  position: absolute;
+  bottom: -62.5px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
 }
-input {
+textarea {
   width: 100%;
   border: none;
   border-radius: 0;
@@ -20,6 +19,8 @@ input {
   color: #8298B9;
   line-height: 22px;
   background: #FFF;
+  height: 28px;
+  resize: none;
 }
 ::placeholder {
   color: #8298B9;

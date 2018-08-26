@@ -81,7 +81,7 @@ class Comments extends Component {
             )}
           </ul>
         }
-        <AddCommentForm addComment={this.addComment}/>
+        <AddCommentForm addComment={this.addComment} />
       </div>
     )
   }

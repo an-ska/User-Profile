@@ -38,7 +38,7 @@ class AddCommentForm extends Component {
   render() {
     return (
       <form className={styles.formBox}>
-        <input
+        <textarea
           type="text"
           placeholder="Add a comment"
           value={this.state.input}
