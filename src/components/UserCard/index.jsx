@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
-import styles from "./MainUser.scss";
+import styles from "./UserCard.scss";
 import Statistic from "../../components/Statistic";
 import Button from "../../components/Button";
 import Dialog from "../../components/Dialog";
 import data from "../../userProfileData";
 
-class MainUser extends Component {
+class UserCard extends Component {
   constructor(props) {
     super(props);
 
@@ -144,4 +144,4 @@ class MainUser extends Component {
   }
 }
 
-export default MainUser;
+export default UserCard;

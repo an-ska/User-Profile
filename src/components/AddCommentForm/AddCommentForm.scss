@@ -1,34 +1,35 @@
 .formBox {
-  border-radius: 0 0 5px 5px;
-  background: #FFF;
-  padding: 14.5px 25px 16px 25px;
-  box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
   position: absolute;
   bottom: -62.5px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 14.5px 25px 16px 25px;
+  border-radius: 0 0 5px 5px;
+  background: #FFF;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
 }
 textarea {
   width: 100%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid #DBE0E8;
-  font-size: 14px;
-  color: #8298B9;
-  line-height: 22px;
-  background: #FFF;
   height: 28px;
   resize: vertical;
   max-height: 50px;
   padding: 5px;
+  font-size: 14px;
+  color: #8298B9;
+  line-height: 14px;
+  background: #FFF;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #DBE0E8;
+
 }
 ::placeholder {
   color: #8298B9;
   font-size: 18px;
 }
 .error {
-  font-size: 14px;
   color: #Ef1426;
+  font-size: 14px;
 }

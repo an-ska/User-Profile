@@ -3,10 +3,10 @@
   max-width: 450px;
   min-width: 200px;
   height: 200px;
-  border-radius: 10px;
   padding: 20px;
   overflow-y: scroll;
   position: relative;
+  border-radius: 5px;
 }
 .overlay {
   display: flex;
@@ -27,21 +27,21 @@
   animation: show .5s ease;
 }
 .close {
-  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 .dialog {
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 18px;
 }
 
 .information {
-  color: #444;
   padding-bottom: 15px;
+  color: #444;
 }
 .link {
   color: #FFA640;
