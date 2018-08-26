@@ -1,0 +1,22 @@
+.statistic {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.value {
+  color: #FFA640;
+  font-size: 24px;
+}
+
+.label {
+  font-size: 10px;
+  color: #343E00;
+  text-transform: capitalize;
+}
+
+@media (min-width: 500px) {
+  .statistic {
+    flex: 1;
+  }
+}

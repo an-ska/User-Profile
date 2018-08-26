@@ -84,42 +84,48 @@ class MainUser extends Component {
       <Fragment>
         <div className={styles.userCard}>
           <div id={mainUser.id}>
-            <a href="#">
+            <a
+              href="#"
+              role="button"
+              className={styles.share}>
               <i
                 className="fas fa-share-square"
-                onClick={this.toggleDialog}
-              ></i>
+                onClick={this.toggleDialog}>
+              </i>
             </a>
-            <p>{mainUser.name}</p>
-            <i
-              className={`${"fa-heart"} ${isLiked ? "fas" : "far"}`}
-              onClick={this.changeLikesNumber}>
-            </i>
-            <p>{mainUser.location}</p>
             <img
-              alt="commentator photo"
+              alt="user photo"
               src={mainUser.photoUrl}
               className={styles.avatar}
             />
-            <ul className={styles.statistics}>
-              <Statistic
-                value={mainUser.likes}
-                label="likes"
+            <span className={styles.heading}>
+              <h1 className={styles.name}>{mainUser.name}</h1>
+              <i
+                className={`${"fa-heart"} ${styles.like} ${isLiked ? "fas" : "far"}`}
+                onClick={this.changeLikesNumber}></i>
+            </span>
+            <span className={styles.location}>{mainUser.location}</span>
+            <div className={styles.content}>
+              <ul className={styles.statistics}>
+                <Statistic
+                  value={mainUser.likes}
+                  label="likes"
+                />
+                <Statistic
+                  value={mainUser.following}
+                  label="following"
+                />
+                <Statistic
+                  value={mainUser.followers}
+                  label="followers"
+                />
+              </ul>
+              <Button
+                text={`${isFollowed ? "following" : "follow"}`}
+                handleClick={this.changeFollowersNumber}
               />
-              <Statistic
-                value={mainUser.following}
-                label="following"
-              />
-              <Statistic
-                value={mainUser.followers}
-                label="followers"
-              />
-            </ul>
+            </div>
           </div>
-          <Button
-            text={`${isFollowed ? "following" : "follow"}`}
-            handleClick={this.changeFollowersNumber}
-          />
         </div>
         <div>
           {
@@ -129,7 +135,7 @@ class MainUser extends Component {
               text="Copy the following link to share this profile:"
               link={mainUser.url}
               handleClick={this.toggleDialog}
-             />
+            />
           }
         </div>
       </Fragment>
