@@ -6,7 +6,7 @@ const Button = ({ text, handleClick }) => (
     type="button"
     className={styles.button}
     onClick={handleClick}>
-    <span>{text}</span>
+    <span className={styles.buttonContent}>{text}</span>
   </button>
 )
 

@@ -1,16 +1,19 @@
 .button {
+  background: #FFA640;
+  padding: 15px 25px;
+  border-radius: 34px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonContent {
+  font-weight: bold;
   color: #FFF;
   text-transform: uppercase;
   letter-spacing: 4.2px;
   font-size: 14px;
   line-height: 18px;
-  background: #FFA640;
-  padding: 15px 25px;
-  border-radius: 34px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
 }
 
 @media (min-width: 500px) {
