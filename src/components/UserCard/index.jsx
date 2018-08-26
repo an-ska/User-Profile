@@ -3,7 +3,7 @@ import styles from "./UserCard.scss";
 import Statistic from "../../components/Statistic";
 import Button from "../../components/Button";
 import Dialog from "../../components/Dialog";
-import data from "../../userProfileData";
+import data from "../../userProfileData.json";
 
 class UserCard extends Component {
   constructor(props) {

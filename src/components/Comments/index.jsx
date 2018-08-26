@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "./Comments.scss";
 import Comment from "../Comment";
 import AddCommentForm from "../../components/AddCommentForm";
-import data from "../../userProfileData";
+import data from "../../userProfileData.json";
 
 let firstAvailableId = 8;
 
