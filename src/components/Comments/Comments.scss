@@ -21,6 +21,13 @@
   padding-right: 15px;
 }
 
-.innerCommentsContainer {
-
+.toggleComments {
+  display: block;
+  color: #FFA640;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+  padding: 25px 0;
+  font-size: 14px;
+  line-height: 18px;
 }

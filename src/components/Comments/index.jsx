@@ -62,6 +62,7 @@ class Comments extends Component {
       <div className={styles.commentsContainer}>
         <a
           role="button"
+          className={styles.toggleComments}
           onClick={this.toggleComments}
           >
           {areCommentsShown ? "Hide" : "Show"} comments({comments.length})
