@@ -128,7 +128,7 @@ class UserCard extends Component {
             </div>
           </div>
         </div>
-        <div>
+        <Fragment>
           {
             isDialogOpened &&
             <Dialog
@@ -138,7 +138,7 @@ class UserCard extends Component {
               handleClick={this.toggleDialog}
             />
           }
-        </div>
+        </Fragment>
       </Fragment>
     )
   }
