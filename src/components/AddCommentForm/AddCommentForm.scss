@@ -5,31 +5,36 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 14.5px 25px 16px 25px;
+  padding: 14.5px 25px 22px;
   border-radius: 0 0 5px 5px;
   background: #FFF;
   box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
 }
 textarea {
   width: 100%;
-  height: 28px;
-  resize: vertical;
-  max-height: 50px;
+  height: 22px;
+  resize: none;
   padding: 5px;
   font-size: 14px;
-  color: #8298B9;
+  color: var(--fontLight);
   line-height: 14px;
   background: #FFF;
   border: none;
   border-radius: 0;
   border-bottom: 2px solid #DBE0E8;
-
 }
-::placeholder {
-  color: #8298B9;
+textarea::placeholder {
+  color: var(--fontLight);
   font-size: 18px;
 }
 .error {
   color: #Ef1426;
   font-size: 14px;
+}
+
+@media(min-width: 500px) {
+  .formBox {
+    padding: 40px 25px 36px;
+    bottom: -101.5px;
+  }
 }

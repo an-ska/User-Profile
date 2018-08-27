@@ -10,12 +10,12 @@
   }
 }
 .value {
-  color: #FFA640;
+  color: var(--accentColorLight);
   font-size: 24px;
 }
 .label {
   font-size: 10px;
-  color: #8298B9;
+  color: var(--fontLight);
   text-transform: capitalize;
 }
 

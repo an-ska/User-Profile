@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   background: #FFF;
-  box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   position: relative;
@@ -17,7 +17,7 @@
 .toggleComments {
   display: block;
   padding: 25px 20px 30px 20px;
-  color: #FFA640;
+  color: var(--accentColorLight);
   text-decoration: underline;
   text-align: center;
   font-size: 14px;
@@ -26,6 +26,12 @@
 }
 
 @media (min-width: 500px) {
+  .commentsContainer  {
+    margin-top: 10px;
+  }
+  .comments {
+    height: 495px;
+  }
   .toggleComments {
     text-align: left;
   }

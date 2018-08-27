@@ -23,7 +23,7 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  color: #FFA640;
+  color: var(--accentColorLight);
 }
 .heading {
   display: flex;
@@ -33,12 +33,11 @@
 .name {
   padding-right: 10px;
   font-size: 18px;
-  color: #002C71;
+  color: var(--accentColorDark);
   line-height: 24px;
 }
 .like {
   color: #D9D9D9;
-
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
@@ -47,7 +46,7 @@
   display: block;
   font-size: 12px;
   line-height: 15px;
-  color: #8298B9;
+  color: var(--fontLight);
   text-align: center;
 }
 .content {

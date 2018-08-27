@@ -15,7 +15,7 @@
   display: flex;
 }
 .commentBody {
-  padding: 0 20px 0 11px;
+  padding: 12px 20px 0 11px;
   flex: 1;
 }
 .avatar {
@@ -25,14 +25,17 @@
   border-radius: 50%;
 }
 .name {
-  color: #002C71;
+  color: var(--accentColorDark);
+  line-height: 18px;
 }
 .text {
+  padding-top: 6px;
   line-height: 21px;
   color: #444;
 }
 .commentRight {
-  color: #8298B9;
+  color: var(--fontLight);
+  padding-top: 12px;
 }
 
 @media (min-width: 500px) {
@@ -41,5 +44,8 @@
     &:first-child {
       padding-top: 0;
     }
+  }
+  .text {
+    width: 333px;
   }
 }
