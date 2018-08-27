@@ -23,9 +23,9 @@ class AddCommentForm extends Component {
     const inputLength = input.length;
 
     if (e.key !== "Enter") return;
+    e.preventDefault();
 
     if (inputLength === 0) {
-      e.preventDefault();
       this.setState({
         isEmptySubmission: true
       })
@@ -33,7 +33,6 @@ class AddCommentForm extends Component {
     }
 
     if (inputLength > 0) {
-      e.preventDefault();
       this.props.addComment(input);
       this.setState({
         input: ""
