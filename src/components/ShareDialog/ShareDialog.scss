@@ -1,4 +1,4 @@
-.dialog {
+.shareDialog {
   background: #FFF;
   max-width: 450px;
   min-width: 200px;
@@ -32,13 +32,12 @@
   right: 20px;
   cursor: pointer;
 }
-.dialog {
+.shareDialog {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 18px;
 }
-
 .information {
   padding-bottom: 15px;
   color: #444;

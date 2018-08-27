@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./Dialog.scss";
+import styles from "./ShareDialog.scss";
 
-const Dialog = ({ text, link, icon, handleClick }) => (
+const ShareDialog = ({ text, link, icon, handleClick }) => (
   <div className={styles.overlay}>
-    <div className={styles.dialog}>
+    <div className={styles.shareDialog}>
       <p className={styles.information}>{text}</p>
       <a
         href={link}
@@ -18,4 +18,4 @@ const Dialog = ({ text, link, icon, handleClick }) => (
   </div>
 )
 
-export default Dialog;
+export default ShareDialog;

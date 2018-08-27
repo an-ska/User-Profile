@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import styles from "./UserCard.scss";
 import Statistic from "../../components/Statistic";
 import Button from "../../components/Button";
-import Dialog from "../../components/Dialog";
+import ShareDialog from "../../components/ShareDialog";
 import data from "../../userProfileData.json";
 
 class UserCard extends Component {
@@ -13,7 +13,7 @@ class UserCard extends Component {
       mainUser: {},
       isLiked: false,
       isFollowed: false,
-      isDialogOpened: false
+      isShareDialogOpened: false
     }
   }
 
@@ -27,9 +27,9 @@ class UserCard extends Component {
     })
   }
 
-  toggleDialog = () => {
+  toggleShareDialog = () => {
     this.setState((prevState) => ({
-      isDialogOpened: !prevState.isDialogOpened
+      isShareDialogOpened: !prevState.isShareDialogOpened
     }))
   }
 
@@ -78,7 +78,7 @@ class UserCard extends Component {
   }
 
   render(){
-    const { mainUser, isLiked, isFollowed, isDialogOpened } = this.state;
+    const { mainUser, isLiked, isFollowed, isShareDialogOpened } = this.state;
 
     return (
       <Fragment>
@@ -90,7 +90,7 @@ class UserCard extends Component {
               className={styles.share}>
               <i
                 className="fas fa-share-square"
-                onClick={this.toggleDialog}>
+                onClick={this.toggleShareDialog}>
               </i>
             </a>
             <img
@@ -130,12 +130,12 @@ class UserCard extends Component {
         </div>
         <Fragment>
           {
-            isDialogOpened &&
-            <Dialog
+            isShareDialogOpened &&
+            <ShareDialog
               icon="fa-times-circle"
               text="Please copy the following link to share this profile:"
               link={mainUser.url}
-              handleClick={this.toggleDialog}
+              handleClick={this.toggleShareDialog}
             />
           }
         </Fragment>
