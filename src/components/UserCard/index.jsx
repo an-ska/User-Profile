@@ -34,47 +34,39 @@ class UserCard extends Component {
   }
 
   changeLikesNumber = () => {
-    if (!this.state.isLiked) {
-      this.setState((prevState) => ({
-        mainUser: {
-          ...prevState.mainUser,
-          likes: prevState.mainUser.likes + 1
-        }
-      }))
-    } else {
-      this.setState((prevState) => ({
-        mainUser: {
-          ...prevState.mainUser,
-          likes: prevState.mainUser.likes > 0 ? prevState.mainUser.likes - 1 : prevState.mainUser.likes
-        }
-      }))
-    }
-
     this.setState((prevState) => ({
+      mainUser: {
+        ...prevState.mainUser,
+        likes: this.getUpdatedLikesNumber(prevState.mainUser.likes)
+      },
       isLiked: !prevState.isLiked
     }))
   }
 
-  changeFollowersNumber = () => {
-    if (!this.state.isFollowed) {
-      this.setState((prevState) => ({
-        mainUser: {
-          ...prevState.mainUser,
-          followers: prevState.mainUser.followers + 1
-        }
-      }))
+  getUpdatedLikesNumber = (currentLikesNumber) => {
+    if (!this.state.isLiked) {
+      return currentLikesNumber + 1
     } else {
-      this.setState((prevState) => ({
-        mainUser: {
-          ...prevState.mainUser,
-          followers: prevState.mainUser.followers > 0 ? prevState.mainUser.followers - 1 : prevState.mainUser.followers
-        }
-      }))
+      return currentLikesNumber > 0 ? currentLikesNumber - 1 : currentLikesNumber
     }
+  }
 
+  changeFollowersNumber = () => {
     this.setState((prevState) => ({
+      mainUser: {
+        ...prevState.mainUser,
+        followers: this.getUpdatedFollowersNumber(prevState.mainUser.followers)
+      },
       isFollowed: !prevState.isFollowed
     }))
+  }
+
+  getUpdatedFollowersNumber = (currentFollowersNumber) => {
+    if (!this.state.isFollowed) {
+      return currentFollowersNumber + 1
+    } else {
+      return currentFollowersNumber > 0 ? currentFollowersNumber - 1 : currentFollowersNumber
+    }
   }
 
   render(){
