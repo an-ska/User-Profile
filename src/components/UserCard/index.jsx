@@ -10,7 +10,7 @@ class UserCard extends Component {
     super(props);
 
     this.state = {
-      mainUser: {},
+      user: {},
       isLiked: false,
       isFollowed: false,
       isShareDialogOpened: false
@@ -18,12 +18,12 @@ class UserCard extends Component {
   }
 
   componentDidMount = () => {
-    this.getMainUser();
+    this.getUser();
   }
 
-  getMainUser = () => {
+  getUser = () => {
     this.setState({
-      mainUser: data.user
+      user: data.user
     })
   }
 
@@ -35,9 +35,9 @@ class UserCard extends Component {
 
   changeLikesNumber = () => {
     this.setState((prevState) => ({
-      mainUser: {
-        ...prevState.mainUser,
-        likes: this.getUpdatedLikesNumber(prevState.mainUser.likes)
+      user: {
+        ...prevState.user,
+        likes: this.getUpdatedLikesNumber(prevState.user.likes)
       },
       isLiked: !prevState.isLiked
     }))
@@ -53,9 +53,9 @@ class UserCard extends Component {
 
   changeFollowersNumber = () => {
     this.setState((prevState) => ({
-      mainUser: {
-        ...prevState.mainUser,
-        followers: this.getUpdatedFollowersNumber(prevState.mainUser.followers)
+      user: {
+        ...prevState.user,
+        followers: this.getUpdatedFollowersNumber(prevState.user.followers)
       },
       isFollowed: !prevState.isFollowed
     }))
@@ -70,12 +70,12 @@ class UserCard extends Component {
   }
 
   render(){
-    const { mainUser, isLiked, isFollowed, isShareDialogOpened } = this.state;
+    const { user, isLiked, isFollowed, isShareDialogOpened } = this.state;
 
     return (
       <Fragment>
         <div className={styles.userCard}>
-          <div id={mainUser.id}>
+          <div id={user.id}>
             <a
               href="#"
               role="button"
@@ -87,29 +87,29 @@ class UserCard extends Component {
             </a>
             <img
               alt="user photo"
-              src={mainUser.photoUrl}
+              src={user.photoUrl}
               className={styles.avatar}
             />
             <span className={styles.heading}>
-              <h1 className={styles.name}>{mainUser.name}</h1>
+              <h1 className={styles.name}>{user.name}</h1>
               <i
                 className={`${"fa-heart"} ${styles.like} ${isLiked ? "fas" : "far"}`}
                 onClick={this.changeLikesNumber}>
               </i>
             </span>
-            <span className={styles.location}>{mainUser.location}</span>
+            <span className={styles.location}>{user.location}</span>
             <div className={styles.content}>
               <ul className={styles.statistics}>
                 <Statistic
-                  value={mainUser.likes}
+                  value={user.likes}
                   label="likes"
                 />
                 <Statistic
-                  value={mainUser.following}
+                  value={user.following}
                   label="following"
                 />
                 <Statistic
-                  value={mainUser.followers}
+                  value={user.followers}
                   label="followers"
                 />
               </ul>
@@ -126,7 +126,7 @@ class UserCard extends Component {
             <ShareDialog
               icon="fa-times-circle"
               text="Please copy the following link to share this profile:"
-              link={mainUser.url}
+              link={user.url}
               handleClick={this.toggleShareDialog}
             />
           }
