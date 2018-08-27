@@ -7,14 +7,14 @@ class AddCommentForm extends Component {
 
     this.state = {
       input: "",
-      isEmpty: false
+      isEmptySubmission: false
     }
   }
 
   handleChange = e => {
     this.setState({
       input: e.target.value,
-      isEmpty: false
+      isEmptySubmission: false
     })
   }
 
@@ -27,7 +27,7 @@ class AddCommentForm extends Component {
     if (inputLength === 0) {
       e.preventDefault();
       this.setState({
-        isEmpty: true
+        isEmptySubmission: true
       })
       return;
     }
@@ -42,7 +42,7 @@ class AddCommentForm extends Component {
   }
 
   render() {
-    const { input, isEmpty } = this.state;
+    const { input, isEmptySubmission } = this.state;
 
     return (
       <form className={styles.formBox}>
@@ -54,7 +54,7 @@ class AddCommentForm extends Component {
           onKeyPress={this.handleKeyPress}
           className={styles.input} />
         {
-          isEmpty &&
+          isEmptySubmission &&
           <span className={styles.error}>Please, fill in the field.</span>
         }
       </form>
