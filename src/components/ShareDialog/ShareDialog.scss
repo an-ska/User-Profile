@@ -6,6 +6,10 @@
   padding: 20px;
   position: relative;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
 }
 .overlay {
   display: flex;
@@ -30,12 +34,6 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
-}
-.shareDialog {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 18px;
 }
 .information {
   padding-bottom: 15px;
