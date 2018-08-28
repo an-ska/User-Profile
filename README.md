@@ -12,3 +12,4 @@ Used:
 * React.js
 * SASS
 * Flexbox
+* CSS variables
