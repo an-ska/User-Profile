@@ -32,6 +32,9 @@
   padding-top: 6px;
   line-height: 21px;
   color: #444;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .commentRight {
   color: var(--fontLight);
@@ -44,8 +47,5 @@
     &:first-child {
       padding-top: 0;
     }
-  }
-  .text {
-    width: 333px;
   }
 }
